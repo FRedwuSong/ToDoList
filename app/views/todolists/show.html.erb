@@ -1,0 +1,8 @@
+<div class="container">
+	<%= @todolist.name %>
+	<br>
+	<%= @todolist.date %>
+	<%= simple_format(@todolist.note) %>
+	<%= link_to 'BACK', :back, class: 'btn btn-default' %>
+	<%= link_to '首頁', todolists_path, class: 'btn btn-default' %>
+</div>

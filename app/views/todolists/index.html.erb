@@ -1,0 +1,25 @@
+
+<div class="text-primary"><h1 align="center">Fred's To Do List</h1></div>
+
+<div class="addbtn"><%= link_to 'NEW', new_todolist_path,class: 'btn btn-success btn-lg active' %></div>
+
+<table class="table table-striped">
+	
+ 		<% @todolists.each do |todolist| %>
+   	<tr>
+     	
+     	<td><%= todolist.name %></td>
+     	<td><%= todolist.date %></td>
+     	<td><%= link_to '詳細訊息 ', todolist_path(todolist) %></td>
+	 		<td><%= todolist_delete_button(todolist) %></td>
+	 		<td><%= todolist_edit_button(todolist) %></td>
+     
+   	</tr>
+   
+ 			<% end %>
+ 			
+</table>
+
+
+
+
